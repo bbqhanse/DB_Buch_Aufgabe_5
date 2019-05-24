@@ -31,3 +31,9 @@ select L.Nachname, L.Kürzel, F.Bezeichnung
 from lehrt LE join lehrer L on L.ID_Lehrer = LE.ID_Lehrer
 join fach F on LE.ID_Fach = F.ID_Fach;
 
+-- Aufgabe 5-6
+select L.Kürzel, F.Bezeichnung 'vor.bezeichnung', F1.Bezeichnung 'Nach.bezeichnung'
+from fach F join vorraussetzen vo on F.ID_Fach = vo.ID_Fach_ist_Vorraussetzung
+join fach F1 on vo.ID_Fach_hat_Vorraussetzung = F1.ID_Fach
+join lehrt LE on LE.ID_Fach = F.ID_Fach
+join lehrer L on LE.ID_Lehrer=l.ID_Lehrer order by f.Bezeichnung asc ;
