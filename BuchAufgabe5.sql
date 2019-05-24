@@ -37,3 +37,7 @@ from fach F join vorraussetzen vo on F.ID_Fach = vo.ID_Fach_ist_Vorraussetzung
 join fach F1 on vo.ID_Fach_hat_Vorraussetzung = F1.ID_Fach
 join lehrt LE on LE.ID_Fach = F.ID_Fach
 join lehrer L on LE.ID_Lehrer=l.ID_Lehrer order by f.Bezeichnung asc ;
+
+-- Aufgabe 5-7
+select S.Vorname, K.Bezeichnung
+from schüler S left join klasse K on S.ID_Klasse = K.ID_Klasse;
