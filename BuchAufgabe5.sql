@@ -46,3 +46,8 @@ from schüler S left join klasse K on S.ID_Klasse = K.ID_Klasse;
 select F.Kürzel, L.Kürzel
 from fach F left join lehrt LE on F.ID_Fach =LE.ID_Fach
     left join lehrer L on LE.ID_Lehrer = L.ID_Lehrer;
+
+-- Aufgabe 5-9
+select L.Kürzel, F.Kürzel
+from lehrer L left join lehrt LE on L.ID_Lehrer=LE.ID_Lehrer
+left join fach F on LE.ID_Fach =F.ID_Fach;
