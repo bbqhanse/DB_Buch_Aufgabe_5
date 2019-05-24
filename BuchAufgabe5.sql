@@ -41,3 +41,8 @@ join lehrer L on LE.ID_Lehrer=l.ID_Lehrer order by f.Bezeichnung asc ;
 -- Aufgabe 5-7
 select S.Vorname, K.Bezeichnung
 from schüler S left join klasse K on S.ID_Klasse = K.ID_Klasse;
+
+-- Aufgabe 5-8
+select F.Kürzel, L.Kürzel
+from fach F left join lehrt LE on F.ID_Fach =LE.ID_Fach
+    left join lehrer L on LE.ID_Lehrer = L.ID_Lehrer;
