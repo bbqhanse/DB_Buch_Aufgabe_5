@@ -25,3 +25,9 @@ select  L.Kürzel, K.Bezeichnung, F.Kürzel
 from unterrichten un join klasse K on un.ID_Klasse =K.ID_Klasse
 join lehrer L on un.ID_Lehrer = L.ID_Lehrer
 join fach F on un.ID_Fach = F.ID_Fach;
+
+-- Aufgabe 5-5
+select L.Nachname, L.Kürzel, F.Bezeichnung
+from lehrt LE join lehrer L on L.ID_Lehrer = LE.ID_Lehrer
+join fach F on LE.ID_Fach = F.ID_Fach;
+
